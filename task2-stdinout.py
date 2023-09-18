@@ -21,7 +21,7 @@ if __name__ == '__main__':
         print("test2 FAIL")
 
 # test3
-    if checkout("cd /home/nata/out; 7z e arx2.7z", "Everything is OK"):  
+    if checkout("cd /home/nata/out; 7z t arx2.7z", "Everything is OK"):  
         print("test3 SUCCESS")
     else
         print("test3 FAIL")
