@@ -23,4 +23,4 @@ def test_step2():
 
 def test_step3():
     # test3
-    assert checkout("cd /home/nata/out; 7z e arx2.7z", "Everything is OK"), "test3 FAIL"
+    assert checkout("cd /home/nata/out; 7z t arx2.7z", "Everything is OK"), "test3 FAIL"
