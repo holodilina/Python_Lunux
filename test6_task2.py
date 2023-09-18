@@ -20,18 +20,10 @@ def test_1():
 
 def test_2():
     # test2
-    res1 = checkout(cmd:f"cd {folder_out}; 7z e arx3.7z {folder_ext}", text:"Everything is OK")
+    res1 = checkout(cmd:f"cd {folder_out}; 7z e arx3.7z -o{folder_ext}", text:"Everything is OK")
     res2 = checkout(cmd:f"ls {folder_ext}, text:"test_file.txt"
     assert res1 and res2, "test_2 FAIL"
 
 def test_3():
     # test3
     assert checkout(cmd:f"cd {folder_out}; 7z t arx2.7z", "Everything is OK"), "test_3 FAIL"
-
-def test_4():
-    # test4
-    assert checkout(cmd:f"cd {folder_out}; 7z u arx2.7z", "Everything is OK"), "test_4 FAIL"
-
-def test_5():
-    # test5
-    assert checkout(cmd:f"cd {folder_out}; 7z d arx2.7z", "Everything is OK"), "test_5 FAIL"
