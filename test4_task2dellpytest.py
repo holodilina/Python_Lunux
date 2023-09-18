@@ -12,24 +12,24 @@ def checkout(cmd, text):
         return False
 
 
-def test_step1():
+def test_1():
     # test1
-    assert checkout(cmd:f"cd {folder_tst}; 7z a ../out/arx2", "Everything is OK"), "test1 FAIL"
+    assert checkout(cmd:f"cd {folder_tst}; 7z a ../out/arx2", "Everything is OK"), "test_1 FAIL"
 
-def test_step2():
+def test_2():
     # test2
-    assert checkout(cmd:f"cd {folder_out}; 7z e arx2.7z {folder_ext}", "Everything is OK"), "test2 FAIL"
+    assert checkout(cmd:f"cd {folder_out}; 7z e arx2.7z {folder_ext}", "Everything is OK"), "test_2 FAIL"
 
-def test_step3():
+def test_3():
     # test3
-    assert checkout(cmd:f"cd {folder_out}; 7z t arx2.7z", "Everything is OK"), "test3 FAIL"
+    assert checkout(cmd:f"cd {folder_out}; 7z t arx2.7z", "Everything is OK"), "test_3 FAIL"
 
-def test_step4():
+def test_4():
     # test4
-    assert checkout(cmd:f"cd {folder_out}; 7z u arx2.7z", "Everything is OK"), "test4 FAIL"
+    assert checkout(cmd:f"cd {folder_out}; 7z u arx2.7z", "Everything is OK"), "test_4 FAIL"
 
-def test_step5():
+def test_5():
     # test5
-    assert checkout(cmd:f"cd {folder_out}; 7z d arx2.7z", "Everything is OK"), "test5 FAIL"
+    assert checkout(cmd:f"cd {folder_out}; 7z d arx2.7z", "Everything is OK"), "test_5 FAIL"
 
 
