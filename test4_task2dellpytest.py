@@ -14,7 +14,7 @@ def checkout(cmd, text):
 
 def test_step1():
     # test1
-    assert cheackout(cmd:f"cd {folder_tst}; 7z a ../out/arx2", "Everything is OK"), "test1 FAIL"
+    assert checkout(cmd:f"cd {folder_tst}; 7z a ../out/arx2", "Everything is OK"), "test1 FAIL"
 
 def test_step2():
     # test2
