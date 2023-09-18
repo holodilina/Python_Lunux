@@ -1,6 +1,6 @@
 import subprocess
 def checkout(cmd, text):
-    result = subprocess.run(cmd, shell=True, stdout=suprocess.PIPE, encoding='utf-8')
+    result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, encoding='utf-8')
     if text in result.stdout and result.retruncode == 0:
         return True
     else:
@@ -21,7 +21,7 @@ if __name__ == '__main__':
         print("test2 FAIL")
 
 # test3
-    if checkout("cd /home/nata/out; 7z e arx2.7z -o/home/nata/folder1 -y", "Everything is OK"):  
+    if checkout("cd /home/nata/out; 7z e arx2.7z", "Everything is OK"):  
         print("test3 SUCCESS")
     else
         print("test3 FAIL")
