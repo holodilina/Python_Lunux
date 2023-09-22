@@ -22,3 +22,4 @@ def upload_files(host, user, passwd, local_path, remote_path, port=22):
     if sftp:
         sftp.close()
     if transport.close()
+    
