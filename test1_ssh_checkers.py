@@ -7,6 +7,7 @@ def ssh_checkout(host, user, passwd, cmd, text, port=22):
     stdin, stdout, stderr = client.exec_command(cmd)
     exit_code = stdout.channel.recv_exit_status()
     out = (stdout.read() + stderr.read()).decode("utf-8")
+    print(out)
     client.close()
     if text in out and exit_code == 0:
        return True
