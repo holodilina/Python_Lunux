@@ -14,6 +14,14 @@ class TestPositive:
      res2 = checkout(cmd:f"ls {data['folder_out']}; ", data['output_file'])
      assert res1 and res2, "test 1 FAIL2"
 
+ def test_2(self, clear_folders, make_files, save_stat):
+   "test2 распаковать архив
+   res = []
+   res.append(
+       checkout(cmd:f"cd {data['folder_tst']}; 7z a {data['folder_out']}/{data['output_file']}", text: "Evething is OK")
+   res.append(
+       checkout(cmd:f"cd {data['folder_out']}; 7z e {data['output_file']} -o{data['folder_ext']}", text: "Evething is OK")
+   for file_name in make_files:
 
 
 
