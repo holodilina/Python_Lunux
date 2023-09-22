@@ -1,11 +1,23 @@
-from test1_ssh_checkers import ssh_checkout, upload_files
+from lib_checkout import checkout, getout
 import yaml
+from test1_ssh_checkers import ssh_checkout, upload_files
 
 with open("config.yaml") as f:
   data = yaml.safe_load(f)
 
 
 class TestPositive:
+
+  det test_0(self):
+   res = []
+    upload_files(data['host'], data['user'], data['password']), data['local_path'], data['remote_path'])
+    res.append(ssh_checkout(data['host'], data['user'], data['password'], cmd:"echo '111' | sudo -S dpkg -i /home/user2/p7zip-full.deb", 
+                            text:"Настраивается пакет"))
+    res.append(ssh_checkout(data['host'], data['user'], data['password'], cmd:"echo '111' | sudo -S dpkg -s p7zip-full",  
+                            text:"Status: install ok installed"))
+  
+    return all(res)
+
 
   def test_1(self, make_folders, clear_folders, make_files, save_stat):
      # test_1 создать архив
