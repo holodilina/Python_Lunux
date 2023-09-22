@@ -9,6 +9,6 @@ key_t: -tzip
 output_file: output.zip
 host: 0.0.0.0
 user: user111
-password: 111
+password: '111'
 local_pach: "/home/nata/test/p7zip.deb"
 remote_path: "/home/user111/p7zip.deb"
