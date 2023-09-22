@@ -11,4 +11,4 @@ def test_step1(self, start_time):
      res = []
      ...
      self.save_log(start_time):
-     assert all(res), 'test1 FAIL"
+     assert all(res), "test1 FAIL"
