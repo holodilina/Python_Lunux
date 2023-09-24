@@ -1,0 +1,14 @@
+folder_tst: /home/nata/tst
+folder_out: /home/nata/out
+folder_ext: /home/nata/folder1
+sub_folder: sub_folder
+count: 3
+bs: 1M
+stat_file: /home/nata/stat.txt
+key_t: -tzip
+output_file: output.zip
+host: 0.0.0.0
+user: user111
+password: '111'
+local_pach: "/home/nata/test/p7zip.deb"
+remote_path: "/home/user111/p7zip.deb"
